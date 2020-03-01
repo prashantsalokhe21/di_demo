@@ -6,7 +6,7 @@ package prashant21tube.springframework.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import prashant21tube.springframework.service.GreetingServiceImpl;
+import prashant21tube.springframework.service.GreetingService;
 
 /**
  * @author lenovo
@@ -16,10 +16,10 @@ import prashant21tube.springframework.service.GreetingServiceImpl;
 public class PropertyInjectedController {
 	
 	@Autowired
-	public GreetingServiceImpl greetingService;
+	public GreetingService greetingServiceImpl;
 	
 	public String sayHello() {
-		return greetingService.sayHello();
+		return greetingServiceImpl.sayHello();
 	}
 
 }
