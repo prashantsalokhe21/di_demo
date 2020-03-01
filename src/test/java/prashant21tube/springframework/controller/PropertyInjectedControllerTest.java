@@ -6,8 +6,8 @@ package prashant21tube.springframework.controller;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import prashant21tube.springframework.service.GreetingServiceImpl;
 
@@ -15,7 +15,7 @@ import prashant21tube.springframework.service.GreetingServiceImpl;
  * @author lenovo
  *
  */
-//@RunWith(Junit5)
+@SpringBootTest
 public class PropertyInjectedControllerTest {
 	
 	private PropertyInjectedController propertyInjectedController;
