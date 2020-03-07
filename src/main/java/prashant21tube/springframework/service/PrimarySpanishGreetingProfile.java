@@ -12,14 +12,16 @@ import org.springframework.stereotype.Service;
  *
  */
 @Service
+@Profile("es")
 @Primary
-//Default is added if no active profile is set then this profile will get seleted
-@Profile({"en", "default"})
-public class PrimaryGreetingService implements GreetingService{
+public class PrimarySpanishGreetingProfile implements GreetingService {
 
+	/* (non-Javadoc)
+	 * @see prashant21tube.springframework.service.GreetingService#sayHello()
+	 */
 	@Override
 	public String sayHello() {
-		return "Hello - from Primary Greeting!!";
+		return "Hola!!! Este es un servicio español.";
 	}
 
 }
