@@ -3,17 +3,10 @@
  */
 package prashant21tube.springframework.service;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
-
 /**
  * @author lenovo
  *
  */
-@Service
-@Profile("es")
-@Primary
 public class PrimarySpanishGreetingProfile implements GreetingService {
 
 	private GreetingRepository greetingRespository;
