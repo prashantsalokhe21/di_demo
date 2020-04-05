@@ -13,15 +13,16 @@ import prashant21tube.springframework.propertybeans.FakeDataSource;
 import prashant21tube.springframework.propertybeans.FakeJmsBroker;
 
 @Configuration
+//Commented @PropertySource and @PropertySources to use SpringBoot's application.properties features
 //@PropertySource({"classpath:datasource.properties","classpath:jms.properties"})
-@PropertySources({
+/*@PropertySources({
 	@PropertySource("classpath:datasource.properties"),
 	@PropertySource("classpath:jms.properties")
-})
+})*/
 public class PropertyConfig {
 	
-	@Autowired
-	Environment env;
+	/*@Autowired
+	Environment env;*/
 	
 	@Value("${sqldb.username}")
 	String username;
@@ -44,11 +45,11 @@ public class PropertyConfig {
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource dataSource = new FakeDataSource();
-		//dataSource.setUsername(username);
+		dataSource.setUsername(username);
 		/**
 		 * Use Environment variable which is set in Environment
 		 */
-		dataSource.setUsername(env.getProperty("USERNAME"));
+		//dataSource.setUsername(env.getProperty("USERNAME"));
 		dataSource.setPassword(password);
 		dataSource.setUrl(url);
 		return dataSource;
@@ -63,9 +64,9 @@ public class PropertyConfig {
 		return broker;		
 	}
 	
-	@Bean
+	/**@Bean
 	public static PropertySourcesPlaceholderConfigurer properties() {
 		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
 		return propertySourcesPlaceholderConfigurer;
-	}
+	}*/
 }

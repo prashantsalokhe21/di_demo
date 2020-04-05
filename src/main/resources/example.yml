@@ -1,0 +1,37 @@
+#This is my comment
+
+name: Prashant
+
+names:
+    - Prashnt
+    - Ojas
+    - Swara
+    - Sarita
+    
+book:
+    author: Joe Buck
+    publisher: random publication
+  
+pound_sign: "#"      
+
+truth: yes
+
+another_truth: True
+
+more_true:true
+
+false_val: no #False, false , No
+
+string_value: "This is it's quote"
+
+colon_string: "My Couces: one two three"
+
+include_new_lines: |
+  erwrwe t3434 dfgdhg
+  gdgerer retrr
+  fgfgh  
+  
+ignore_new_line: >
+  dsffd gergrtrh
+  dsf dfgfhfd   
+  iououk
