@@ -10,6 +10,7 @@ import prashant21tube.springframework.controller.MyController;
 import prashant21tube.springframework.controller.PropertyInjectedController;
 import prashant21tube.springframework.controller.SetterInjectedController;
 import prashant21tube.springframework.propertybeans.FakeDataSource;
+import prashant21tube.springframework.propertybeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -32,6 +33,11 @@ public class DiDemoApplication {
 		System.out.println(dataSource.getUsername());
 		System.out.println(dataSource.getPassword());
 		System.out.println(dataSource.getUrl());
+		
+		FakeJmsBroker broker = (FakeJmsBroker) context.getBean(FakeJmsBroker.class);
+		System.out.println(broker.getUsername());
+		System.out.println(broker.getPassword());
+		System.out.println(broker.getUrl());
 	}
 
 }
