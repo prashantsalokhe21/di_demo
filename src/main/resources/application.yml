@@ -2,3 +2,16 @@ jms:
   username: JMS Username
   password: Jms Password
   url: JMS URL
+  
+ # this will indicate the file seperator  
+---
+
+spring:
+  profiles: de
+jms:
+  username: JMS Username $% In GERMAN
+  password: Jms Password $% In GERMAN
+  url: JMS URL  $% In GERMAN
+  
+---  
+    
